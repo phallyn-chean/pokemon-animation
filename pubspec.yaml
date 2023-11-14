@@ -1,0 +1,57 @@
+name: pokemon_animation
+description: A new Flutter project.
+
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  cached_network_image: ^3.2.3
+  sliding_up_panel: ^2.0.0+1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  dio: ^4.0.0
+  dio_http_cache: ^0.3.0
+  json_annotation: ^4.0.1
+  flutter_bloc: ^8.1.2
+  intl: ^0.18.0
+  stream_transform: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.1.7
+  json_serializable: ^4.1.4
+  hive_generator: ^1.1.2
+  pedantic: ^1.11.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/items.json
+    - assets/pokemons.json
+    - assets/images/
+  
+  fonts:
+    - family: CircularStd
+      fonts:
+        - asset: assets/fonts/CircularStd-Book.ttf
+
+        - asset: assets/fonts/CircularStd-Medium.ttf
+          weight: 600
+
+        - asset: assets/fonts/CircularStd-Black.ttf
+          weight: 700
+
+        - asset: assets/fonts/CircularStd-Bold.ttf
+          weight: 900
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
