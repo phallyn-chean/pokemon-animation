@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:pokemon_animation/models/items.dart';
-import 'package:pokemon_animation/models/pokemon_model.dart';
+import 'package:pokemon_animation/models/source/items.dart';
+import 'package:pokemon_animation/models/source/pokemon_model.dart';
 import 'package:pokemon_animation/services/network.dart';
 
 class GithubDataSource {

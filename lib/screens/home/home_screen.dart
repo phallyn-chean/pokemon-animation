@@ -9,6 +9,7 @@ import 'package:pokemon_animation/routes.dart';
 import 'package:pokemon_animation/screens/home/widgets/category_card.dart';
 import 'package:pokemon_animation/screens/home/widgets/news_card.dart';
 import 'package:pokemon_animation/widgets/pokeball_background.dart';
+import 'package:pokemon_animation/widgets/search_bar.dart';
 
 part 'sections/header_card_content.dart';
 part 'sections/pokemon_news.dart';

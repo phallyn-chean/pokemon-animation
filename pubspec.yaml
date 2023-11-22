@@ -22,6 +22,7 @@ dependencies:
   intl: ^0.18.0
   stream_transform: ^2.0.0
   build_runner_core: ^7.2.9
+  cached_network_image_platform_interface: ^2.0.0
 
 dev_dependencies:
   flutter_test:
