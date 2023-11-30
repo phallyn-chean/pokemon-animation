@@ -28,7 +28,7 @@ class LocalDataSource {
   }
 
   Future<bool> hasItemData() async {
-    final itemBox = Hive.box(ItemHiveModel.boxKey);
+    final itemBox = Hive.box<ItemHiveModel>(ItemHiveModel.boxKey);
 
     return itemBox.length > 0;
   }

@@ -11,7 +11,7 @@ class GithubItemModel {
   late String category;
 
   @JsonKey(disallowNullValue: true)
-  late String imageUrl;
+  late String imageurl;
 
   @JsonKey(disallowNullValue: true)
   late String effect;
@@ -19,7 +19,7 @@ class GithubItemModel {
   GithubItemModel(
     this.name,
     this.category,
-    this.imageUrl,
+    this.imageurl,
     this.effect,
   );
 

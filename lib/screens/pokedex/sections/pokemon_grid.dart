@@ -55,6 +55,7 @@ class _PokemonGridState extends State<PokemonGrid> {
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
+      key: _scrollKey,
       headerSliverBuilder: (_, __) => [
         MainSliverAppBar(context: context),
       ],

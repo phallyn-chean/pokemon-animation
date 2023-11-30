@@ -8,7 +8,7 @@ class GetAllPokemonsUseCase extends NoParamsUseCase<List<Pokemon>> {
   const GetAllPokemonsUseCase({required this.repository});
   @override
   Future<List<Pokemon>> call() {
-    return repository.getAllPokemos();
+    return repository.getAllPokemons();
   }
 }
 

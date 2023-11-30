@@ -13,7 +13,11 @@ class PokemonStateSelector<T> extends BlocSelector<PokemonBloc, PokemonState, T>
 }
 
 class PokemonStateStatusSelector extends PokemonStateSelector<PokemonStateStatus> {
-  PokemonStateStatusSelector(Widget Function(PokemonStateStatus) builder, {super.key}) : super(selector: (state) => state.status, builder: builder);
+  PokemonStateStatusSelector(Widget Function(PokemonStateStatus) builder, {super.key})
+      : super(
+          selector: (state) => state.status,
+          builder: builder,
+        );
 }
 
 class PokemonCanLoadMoreSelector extends PokemonStateSelector<bool> {

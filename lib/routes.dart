@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pokemon_animation/core/fade_route_page.dart';
 import 'package:pokemon_animation/screens/home/home_screen.dart';
 import 'package:pokemon_animation/screens/pokedex/pokedex.dart';
+import 'package:pokemon_animation/screens/pokemon_info/pokemon_info.dart';
 import 'package:pokemon_animation/screens/splash_screen/splash_screen.dart';
 
 enum Routes { splash, home, pokedex, pokemonInfo, typeEffects, items }
@@ -36,6 +37,9 @@ class AppNavigator {
 
       case _Paths.pokedex:
         return FadeRoute(page: const PokedexScreen());
+
+      case _Paths.pokemonInfo:
+        return FadeRoute(page: const PokemonInfo());
 
       case _Paths.home:
       default:

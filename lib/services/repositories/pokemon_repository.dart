@@ -5,7 +5,7 @@ import 'package:pokemon_animation/services/local/local_datasource.dart';
 import 'package:pokemon_animation/services/resource_service.dart';
 
 abstract class PokemonRepository {
-  Future<List<Pokemon>> getAllPokemos();
+  Future<List<Pokemon>> getAllPokemons();
 
   Future<List<Pokemon>> getPokemons({required int limit, required int page});
 
@@ -18,7 +18,7 @@ class PokemonDefaultRepository extends PokemonRepository {
 
   PokemonDefaultRepository({required this.githubDataSource, required this.localDataSource});
   @override
-  Future<List<Pokemon>> getAllPokemos() async {
+  Future<List<Pokemon>> getAllPokemons() async {
     final hashCachedData = await localDataSource.hasData();
 
     if (!hashCachedData) {
@@ -60,7 +60,10 @@ class PokemonDefaultRepository extends PokemonRepository {
       await localDataSource.savePokemons(pokemonHiveModels);
     }
 
-    final pokemonHiveModels = await localDataSource.getPokemons(page: page, limit: limit);
+    final pokemonHiveModels = await localDataSource.getPokemons(
+      page: page,
+      limit: limit,
+    );
 
     final pokemonEntities = pokemonHiveModels.map((e) => e.toEntity()).toList();
 

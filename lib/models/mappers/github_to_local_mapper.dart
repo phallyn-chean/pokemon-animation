@@ -16,10 +16,10 @@ extension GihubPokemonModelToLocalX on GithubPokemonModel {
     ..height = height.trim()
     ..weight = weight.trim()
     ..genera = category.trim()
-    ..eggGroups = eggGroups.split(RegExp(r',\s*?')).map((e) => e.trim()).toList()
+    ..eggGroups = eggGroups?.split(RegExp(r',\s*?')).map((e) => e.trim()).toList() ?? []
     ..gender = (PokemonGenderHiveModel()
-      ..male = genderMalePercentage.parseDouble()
-      ..female = genderFemalePercentage.parseDouble()
+      ..male = genderMalePercentage?.parseDouble() ?? 0
+      ..female = genderFemalePercentage?.parseDouble() ?? 0
       ..genderless = genderless == 1)
     ..stats = (PokemonStatsHiveModel()
       ..hp = hp.toInt()
@@ -30,13 +30,13 @@ extension GihubPokemonModelToLocalX on GithubPokemonModel {
       ..specialDefense = specialDefense.toInt())
     ..baseExp = baseExp.parseDouble()
     ..evolutions = evolutions
-    ..evolutionReason = reason;
+    ..evolutionReason = reason ?? '';
 }
 
 extension GithubItemModelToLocalX on GithubItemModel {
   ItemHiveModel toHiveModel() => ItemHiveModel()
     ..name = name.trim()
     ..category = category.trim()
-    ..imageurl = imageUrl.trim()
+    ..imageurl = imageurl.trim()
     ..effect = effect.trim();
 }

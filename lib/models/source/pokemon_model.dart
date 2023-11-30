@@ -10,7 +10,7 @@ class GithubPokemonModel {
   @JsonKey(required: true, disallowNullValue: true)
   late String id;
 
-  @JsonKey(required: true, name: 'imageUrl', disallowNullValue: true)
+  @JsonKey(required: true, name: 'imageurl', disallowNullValue: true)
   late String imageUrl;
 
   @JsonKey(name: 'xdescription', defaultValue: '')
@@ -62,10 +62,10 @@ class GithubPokemonModel {
   late num total;
 
   @JsonKey(name: 'male_percentage')
-  late String genderMalePercentage;
+  late String? genderMalePercentage;
 
   @JsonKey(name: 'female_percentage')
-  late String genderFemalePercentage;
+  late String? genderFemalePercentage;
 
   @JsonKey(required: true, disallowNullValue: true)
   late num genderless;
@@ -74,13 +74,13 @@ class GithubPokemonModel {
   late String cycles;
 
   @JsonKey(name: 'egg_groups')
-  late String eggGroups;
+  late String? eggGroups;
 
   @JsonKey(name: 'evoledfrom')
-  late String evoledFrom;
+  late String? evoledFrom;
 
   @JsonKey()
-  late String reason;
+  late String? reason;
 
   @JsonKey(name: 'base_exp', defaultValue: '0')
   late String baseExp;

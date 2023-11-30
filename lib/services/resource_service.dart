@@ -15,6 +15,7 @@ class GithubDataSource {
 
   Future<List<GithubPokemonModel>> getPokemons() async {
     final response = await networkManager.request(RequestMethod.get, url);
+    // print(response.data);
 
     final data = (json.decode(response.data) as List).map((item) => GithubPokemonModel.fromJson(item)).toList();
 

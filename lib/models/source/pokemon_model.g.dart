@@ -12,14 +12,14 @@ GithubPokemonModel _$GithubPokemonModelFromJson(Map<String, dynamic> json) {
     requiredKeys: const [
       'name',
       'id',
-      'imageUrl',
+      'imageurl',
       'typeofpokemon',
       'genderless'
     ],
     disallowNullValues: const [
       'name',
       'id',
-      'imageUrl',
+      'imageurl',
       'typeofpokemon',
       'genderless'
     ],
@@ -27,7 +27,7 @@ GithubPokemonModel _$GithubPokemonModelFromJson(Map<String, dynamic> json) {
   return GithubPokemonModel(
     json['name'] as String,
     json['id'] as String,
-    json['imageUrl'] as String,
+    json['imageurl'] as String,
     json['xdescription'] as String? ?? '',
     json['ydescription'] as String? ?? '',
     json['height'] as String? ?? '',
@@ -47,13 +47,13 @@ GithubPokemonModel _$GithubPokemonModelFromJson(Map<String, dynamic> json) {
     json['special_defense'] as num? ?? 0,
     json['speed'] as num? ?? 0,
     json['total'] as num? ?? 0,
-    json['male_percentage'] as String,
-    json['female_percentage'] as String,
+    json['male_percentage'] as String?,
+    json['female_percentage'] as String?,
     json['genderless'] as num,
     json['cycles'] as String,
-    json['egg_groups'] as String,
-    json['evoledfrom'] as String,
-    json['reason'] as String,
+    json['egg_groups'] as String?,
+    json['evoledfrom'] as String?,
+    json['reason'] as String?,
     json['base_exp'] as String? ?? '0',
   );
 }
@@ -62,7 +62,7 @@ Map<String, dynamic> _$GithubPokemonModelToJson(GithubPokemonModel instance) =>
     <String, dynamic>{
       'name': instance.name,
       'id': instance.id,
-      'imageUrl': instance.imageUrl,
+      'imageurl': instance.imageUrl,
       'xdescription': instance.xDescription,
       'ydescription': instance.yDescription,
       'height': instance.height,

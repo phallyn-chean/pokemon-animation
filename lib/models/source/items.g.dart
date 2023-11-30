@@ -9,12 +9,12 @@ part of 'items.dart';
 GithubItemModel _$GithubItemModelFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    disallowNullValues: const ['name', 'imageUrl', 'effect'],
+    disallowNullValues: const ['name', 'imageurl', 'effect'],
   );
   return GithubItemModel(
     json['name'] as String,
     json['category'] as String? ?? '',
-    json['imageUrl'] as String,
+    json['imageurl'] as String,
     json['effect'] as String,
   );
 }
@@ -23,6 +23,6 @@ Map<String, dynamic> _$GithubItemModelToJson(GithubItemModel instance) =>
     <String, dynamic>{
       'name': instance.name,
       'category': instance.category,
-      'imageUrl': instance.imageUrl,
+      'imageurl': instance.imageurl,
       'effect': instance.effect,
     };
