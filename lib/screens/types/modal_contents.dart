@@ -84,7 +84,7 @@ class _ModalContentsState extends State<ModalContents> {
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: lister(widget.index, 1, widget.width, "Normal Against".toUpperCase()),
+          children: lister(widget.index, 1, widget.width + 40, "Normal Against".toUpperCase()),
         ),
         if (pokeType.nilEffective.isNotEmpty)
           Column(
@@ -93,7 +93,7 @@ class _ModalContentsState extends State<ModalContents> {
             children: lister(widget.index, 0, widget.width, "No Effect Against".toUpperCase()),
           ),
         BlocBuilder<PokemonBloc, PokemonState>(
-          builder: (context, state) {
+          builder: (_, state) {
             if (state.error != null) {
               return _buildError();
             }
@@ -123,7 +123,7 @@ class _ModalContentsState extends State<ModalContents> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8),
-              child: Text("${getEnumValue(pokeType.type)[0].toUpperCase() + getEnumValue(pokeType.type).substring(1)} Type $pokemons"),
+              child: Text("${getEnumValue(pokeType.type)[0].toUpperCase() + getEnumValue(pokeType.type).substring(1)} Type " "Pokemons"),
             )
           ],
         );
@@ -177,7 +177,7 @@ class _ModalContentsState extends State<ModalContents> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8),
-              child: Text("${getEnumValue(pokeType.type)[0].toUpperCase() + getEnumValue(pokeType.type).substring(1)} Type Items"),
+              child: Text("${getEnumValue(pokeType.type)[0].toUpperCase() + getEnumValue(pokeType.type).substring(1)} Type " "Items"),
             )
           ],
         );
@@ -198,7 +198,7 @@ class _ModalContentsState extends State<ModalContents> {
         _buildTypeItemsPanel(),
       ],
       expansionCallback: (panelIndex, isExpanded) => setState(() {
-        _isOpen[panelIndex] = !_isOpen[panelIndex];
+        _isOpen[panelIndex] = !isExpanded;
       }),
     );
   }

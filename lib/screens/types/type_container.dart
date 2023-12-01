@@ -9,11 +9,11 @@ class TypeDisplayContainer extends StatelessWidget {
   const TypeDisplayContainer({
     super.key,
     required this.index,
-    this.j,
+    required this.j,
     required this.path,
     required this.typeList,
-    this.value,
-    this.width,
+    required this.value,
+    required this.width,
     required this.height,
   });
 
@@ -34,8 +34,13 @@ class TypeDisplayContainer extends StatelessWidget {
         col = types[index].color;
         text = getEnumValue(types[index].type).toUpperCase();
       } else if (j != null) {
-        col = types[typeIndices[typeList[j!].toLowerCase()]!].color;
-        text = getEnumValue(types[typeIndices[typeList[j!].toLowerCase()]!]).toLowerCase();
+        col = types[index].color;
+        text = getEnumValue(types[index].type).toUpperCase();
+        final jIndex = typeIndices[typeList[(j as int)]];
+        if (jIndex != null) {
+          col = types[jIndex].color;
+          text = getEnumValue(types[jIndex]).toLowerCase();
+        }
       }
     }
 
