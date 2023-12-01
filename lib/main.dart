@@ -24,7 +24,7 @@ void main() async {
           localDataSource: context.read<LocalDataSource>(),
         ),
       ),
-      RepositoryProvider(
+      RepositoryProvider<ItemRepository>(
         create: (context) => ItemDefaultRepository(
           githubDataSource: context.read<GithubDataSource>(),
           localDataSource: context.read<LocalDataSource>(),

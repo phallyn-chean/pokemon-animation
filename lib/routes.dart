@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_animation/core/fade_route_page.dart';
 import 'package:pokemon_animation/screens/home/home_screen.dart';
+import 'package:pokemon_animation/screens/items/items.dart';
 import 'package:pokemon_animation/screens/pokedex/pokedex.dart';
 import 'package:pokemon_animation/screens/pokemon_info/pokemon_info.dart';
 import 'package:pokemon_animation/screens/splash_screen/splash_screen.dart';
@@ -44,6 +45,9 @@ class AppNavigator {
 
       case _Paths.typeEffectsScreen:
         return FadeRoute(page: const TypeEffectScreen());
+
+      case _Paths.itemList:
+        return FadeRoute(page: const ItemsScreen());
 
       case _Paths.home:
       default:
