@@ -4,6 +4,7 @@ import 'package:pokemon_animation/screens/home/home_screen.dart';
 import 'package:pokemon_animation/screens/pokedex/pokedex.dart';
 import 'package:pokemon_animation/screens/pokemon_info/pokemon_info.dart';
 import 'package:pokemon_animation/screens/splash_screen/splash_screen.dart';
+import 'package:pokemon_animation/screens/types/type_screen.dart';
 
 enum Routes { splash, home, pokedex, pokemonInfo, typeEffects, items }
 
@@ -40,6 +41,9 @@ class AppNavigator {
 
       case _Paths.pokemonInfo:
         return FadeRoute(page: const PokemonInfo());
+
+      case _Paths.typeEffectsScreen:
+        return FadeRoute(page: const TypeEffectScreen());
 
       case _Paths.home:
       default:
